@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BlueSky — Simple Weather</title>
+  <link rel="stylesheet" href="w.css" />
+</head>
+<body>
+  <!-- Animated clouds background -->
+  <div class="clouds" aria-hidden="true">
+    <div class="cloud"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+  </div>
+
+  <main class="wrap">
+    <section class="card" role="region" aria-label="Weather app">
+      <header class="card-head">
+        <div class="brand"><span class="dot"></span><span>BlueSky</span></div>
+        <div class="search" role="search">
+          <input id="q" class="input" placeholder="Search city (e.g., Delhi)" aria-label="City name" />
+          <button id="find" class="btn">Search</button>
+          <button id="geo" class="btn secondary">📍</button>
+        </div>
+      </header>
+
+      <div class="grid">
+        <article class="panel" id="now" aria-live="polite">
+          <div class="current">
+            <div>
+              <div class="temp" id="temp">--°</div>
+              <div class="big" id="summary">Type a city or use 📍</div>
+              <div class="muted" id="meta">—</div>
+            </div>
+            <div style="margin-left:auto; text-align:right">
+              <div class="big" id="place">—</div>
+              <div class="chips">
+                <div class="chip" id="wind">Wind: —</div>
+                <div class="chip" id="hum">Humidity: —</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="panel">
+          <div class="big" style="font-weight:700;margin-bottom:8px">Quick Tips</div>
+          <ul style="margin:0;padding-left:18px;line-height:1.7">
+            <li>Type a city, then hit <b>Search</b>.</li>
+            <li>Or click <b>📍</b> to use your current location.</li>
+            
+          </ul>
+        </aside>
+      </div>
+
+      
+    </section>
+  </main>
+
+  <script src="w.js"></script>
+</body>
+</html>
